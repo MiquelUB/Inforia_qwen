@@ -1,0 +1,43 @@
+﻿.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.code {
+  font-family: 'Lora', serif; /* Alineado con el Manual de Marca */
+  font-weight: 700;
+  background: linear-gradient(to right, #2E403B, #800020); /* Verde INFORIA y Burdeos */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  margin: 2rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: 'Nunito Sans', sans-serif; /* Alineado con el Manual de Marca */
+}

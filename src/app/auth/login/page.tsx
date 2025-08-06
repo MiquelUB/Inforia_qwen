@@ -1,32 +1,17 @@
-﻿    <button
-      onClick={onClick}
-      disabled={isLoading}
-      className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
-    >
-      {/* Puedes usar un icono de lucide-react aquí si lo deseas */}
-      {/* <Chrome className="mr-2 h-4 w-4" /> */}
-      {isLoading ? "Redirigiendo..." : "Acceder con Google"}
-    </button>
-  );
-}
+﻿'use client';
+
+import { useState } from 'react';
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const handleSignIn = async () => {
+  const handleLogin = () => {
     setIsLoading(true);
-    setError(null);
-    try {
-      // Simulación de login
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Login simulado');
-    } catch (err) {
-      console.error("Error en signIn:", err);
-      setError(err instanceof Error ? err.message : "Un error desconocido ha ocurrido.");
-    } finally {
+    // Simulación de login
+    setTimeout(() => {
       setIsLoading(false);
-    }
+      console.log('Login simulado');
+    }, 1000);
   };
 
   return (
@@ -41,9 +26,13 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <GoogleAuthButton onClick={handleSignIn} isLoading={isLoading} />
-
-        {error && <p className="mt-4 text-xs text-center text-red-600">{error}</p>}
+        <button
+          onClick={handleLogin}
+          disabled={isLoading}
+          className="w-full px-4 py-2 font-medium text-white bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+        >
+          {isLoading ? "Redirigiendo..." : "Acceder con Google"}
+        </button>
       </div>
     </div>
   );
