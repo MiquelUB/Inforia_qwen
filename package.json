@@ -10,15 +10,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@prisma/client": "^6.13.0",
     "next": "14.2.3",
+    "prisma": "^6.13.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "stripe": "^18.4.0",
+    "zod": "^4.0.15"
   },
   "devDependencies": {
-    "typescript": "5.3.3",
-    "@types/react": "18.2.45",
-    "@types/node": "20.11.5",
-    "@types/react-dom": "18.2.18"
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "18.2.18",
+    "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=18.17.0"
